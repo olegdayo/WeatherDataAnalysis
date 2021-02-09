@@ -1,0 +1,12 @@
+/Users/olegsidorenkov/Desktop/Proga/Proga2Semester1Sem/bin/Debug/netcoreapp3.1/Proga2Semester1Sem.deps.json
+/Users/olegsidorenkov/Desktop/Proga/Proga2Semester1Sem/bin/Debug/netcoreapp3.1/Proga2Semester1Sem.runtimeconfig.json
+/Users/olegsidorenkov/Desktop/Proga/Proga2Semester1Sem/bin/Debug/netcoreapp3.1/Proga2Semester1Sem.runtimeconfig.dev.json
+/Users/olegsidorenkov/Desktop/Proga/Proga2Semester1Sem/bin/Debug/netcoreapp3.1/Proga2Semester1Sem.dll
+/Users/olegsidorenkov/Desktop/Proga/Proga2Semester1Sem/bin/Debug/netcoreapp3.1/Proga2Semester1Sem.pdb
+/Users/olegsidorenkov/Desktop/Proga/Proga2Semester1Sem/obj/Debug/netcoreapp3.1/Proga2Semester1Sem.csprojAssemblyReference.cache
+/Users/olegsidorenkov/Desktop/Proga/Proga2Semester1Sem/obj/Debug/netcoreapp3.1/Proga2Semester1Sem.AssemblyInfoInputs.cache
+/Users/olegsidorenkov/Desktop/Proga/Proga2Semester1Sem/obj/Debug/netcoreapp3.1/Proga2Semester1Sem.AssemblyInfo.cs
+/Users/olegsidorenkov/Desktop/Proga/Proga2Semester1Sem/obj/Debug/netcoreapp3.1/Proga2Semester1Sem.csproj.CoreCompileInputs.cache
+/Users/olegsidorenkov/Desktop/Proga/Proga2Semester1Sem/obj/Debug/netcoreapp3.1/Proga2Semester1Sem.dll
+/Users/olegsidorenkov/Desktop/Proga/Proga2Semester1Sem/obj/Debug/netcoreapp3.1/Proga2Semester1Sem.pdb
+/Users/olegsidorenkov/Desktop/Proga/Proga2Semester1Sem/obj/Debug/netcoreapp3.1/Proga2Semester1Sem.genruntimeconfig.cache
