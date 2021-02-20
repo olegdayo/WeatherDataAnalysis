@@ -12,5 +12,8 @@ namespace Proga2Semester1Sem
         
         
         public abstract void Run();
+        
+        
+        public abstract void Sel();
     }
 }
