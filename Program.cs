@@ -1,7 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
 
 
 namespace Proga2Semester1Sem
@@ -17,17 +14,37 @@ namespace Proga2Semester1Sem
             Console.WriteLine(parser.numOfRows);
             Console.WriteLine(parser.numOfCols);
             WeatherDataChunk[] data = parser.data.ToArray();
+
+
             new AmericaSolver(data).Run();
             new AmericaSolver(data).Sel();
-            Console.WriteLine("--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+
+
+            LogSeparator();
+
+
             new CountingSolver(data).Run();
             new CountingSolver(data).Sel();
-            Console.WriteLine("--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+
+
+            LogSeparator();
+
+
             new TopRainySolver(data).Run();
             new TopRainySolver(data).Sel();
-            Console.WriteLine("--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+
+
+            LogSeparator();
+
+
             new TopSnowfallsSolver(data).Run();
             new TopSnowfallsSolver(data).Sel();
+        }
+
+
+        private static void LogSeparator()
+        {
+            Console.WriteLine(new string('-', 220));
         }
     }
 }
