@@ -40,10 +40,10 @@ namespace Proga2Semester1Sem
             foreach (IGrouping<int, WeatherDataChunk> group in townsByYears)
             {
                 var topSnowyTowns = group
-                    .Select(g => new TopSnowfallsChunk {Year = group.Key, City = g.city, From = g.startTime, To = g.endTime})
+                    .Select(g => new TopSnowfallsChunk
+                        {Year = group.Key, City = g.city, From = g.startTime, To = g.endTime})
                     .OrderByDescending(g => g.To.Subtract(g.From))
                     .ToArray();
-                
                 group.LogTopSnowfallsSolver(topSnowyTowns[0]);
             }
         }
