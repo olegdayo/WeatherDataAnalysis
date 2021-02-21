@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+
 namespace Proga2Semester1Sem
 {
     public static class Sugar
