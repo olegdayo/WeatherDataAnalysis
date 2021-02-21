@@ -14,19 +14,19 @@ namespace Proga2Semester1Sem
         
         public override void Run()
         {
-            var matches = 
-                Data.Where(d => /* d.country == "USA" && */ d.startTime.Year == 2018);
-            Console.WriteLine($"Count of weather situations in USA 2018: {matches.ToArray().Length}");
+            Data
+                .Where(d => d.startTime.Year == 2018)
+                .LogAmerica();
         }
-        
-        
+
+
         public override void Sel()
         {
-            IEnumerable<WeatherDataChunk> matches =
+            var matches =
                 from d in Data
                 where d.startTime.Year == 2018
                 select d;
-            Console.WriteLine($"Count of weather situations in USA 2018: {matches.Count()}");
+            matches.LogAmerica();
         }
     }
 }
