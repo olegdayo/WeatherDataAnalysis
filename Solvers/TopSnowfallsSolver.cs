@@ -21,20 +21,34 @@ namespace Proga2Semester1Sem
         
         public override void Run()
         {
-            Data
-                .Where(d => d.type == WeatherType.Snow)
+            Data.Where(d => d.type == WeatherType.Snow)
+                .OrderByDescending(d => d.endTime.Subtract(d.startTime))
+                .ToArray()
                 .GroupBy(d => d.startTime.Year)
-                .TopSnowfallsSolverCycle();
+                .Select(d => d.First())
+                .OrderBy(d => d.startTime.Year)
+                .LogTopSnowfallsSolver();
         }
         
         
         public override void Sel()
         {
-            var townsByYears =
+            var sortedSnow =
                 from d in Data
                 where d.type == WeatherType.Snow
+                orderby d.endTime.Subtract(d.startTime) descending
+                select d;
+            var groupedSortedSnow =
+                from d in sortedSnow
                 group d by d.startTime.Year;
-            townsByYears.TopSnowfallsSolverCycle();
+            var topGroupedSnow =
+                from d in groupedSortedSnow
+                select d.First();
+            var sortedTopGroupedSnow =
+                from d in topGroupedSnow
+                orderby d.startTime.Year
+                select d;
+            sortedTopGroupedSnow.LogTopSnowfallsSolver();
         }
     }
 }
