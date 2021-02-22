@@ -29,22 +29,11 @@ namespace Proga2Semester1Sem
         }
         
         
-        public static void LogTopSnowfallsSolver(this IGrouping<int, WeatherDataChunk> group, TopSnowfallsChunk top)
+        public static void LogTopSnowfallsSolver(this IEnumerable<WeatherDataChunk> output)
         {
-            Console.WriteLine($"For the year: {group.Key} most snowy is {top.City} with duration (in days): {(int)top.To.Subtract(top.From).TotalDays}, beggining at : {top.From} and ending at: {top.To}");
-        }
-        
-        
-        public static void TopSnowfallsSolverCycle(this IEnumerable<IGrouping<int, WeatherDataChunk>> townsByYears)
-        {
-            foreach (IGrouping<int, WeatherDataChunk> group in townsByYears)
+            foreach (var i in output)
             {
-                var topSnowyTowns = group
-                    .Select(g => new TopSnowfallsChunk
-                        {Year = group.Key, City = g.city, From = g.startTime, To = g.endTime})
-                    .OrderByDescending(g => g.To.Subtract(g.From))
-                    .ToArray();
-                group.LogTopSnowfallsSolver(topSnowyTowns[0]);
+                Console.WriteLine($"For the year: {i.startTime.Year} most snowy is {i.city} with duration (in days): {(int)i.endTime.Subtract(i.startTime).TotalDays}, beggining at : {i.startTime} and ending at: {i.endTime}");
             }
         }
     }
