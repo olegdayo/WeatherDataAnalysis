@@ -44,11 +44,11 @@ namespace Proga2Semester1Sem
             var topGroupedSnow =
                 from d in groupedSortedSnow
                 select d.First();
-            var sortedTopGroupedSnow =
+            sortedSnow =
                 from d in topGroupedSnow
                 orderby d.startTime.Year
                 select d;
-            sortedTopGroupedSnow.LogTopSnowfallsSolver();
+            sortedSnow.LogTopSnowfallsSolver();
         }
     }
 }
